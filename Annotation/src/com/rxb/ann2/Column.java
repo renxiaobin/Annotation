@@ -1,4 +1,4 @@
-package com.rxb.ann;
+package com.rxb.ann2;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,7 +1,6 @@
-package com.rxb.ann;
+package com.rxb.ann1;
 
 import java.lang.annotation.*;
-import java.util.Map;
 
 /**
  * Created by rxb14 on 2016/2/25.

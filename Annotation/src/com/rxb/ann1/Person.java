@@ -1,4 +1,4 @@
-package com.rxb.ann;
+package com.rxb.ann1;
 
 /**
  * Created by rxb14 on 2016/2/25.
@@ -7,6 +7,6 @@ package com.rxb.ann;
 public interface Person {
     @Description(desc="I am person method")
     @Deprecated
-    public void sing();
-    public void eat();
+    void sing();
+    void eat();
 }

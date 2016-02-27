@@ -1,4 +1,4 @@
-package com.rxb.ann;
+package com.rxb.ann1;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -10,7 +10,7 @@ public class ParseAnn {
     public static void main(String[] args) {
         try {
             //获取类上的注解
-            Class c = Class.forName("com.rxb.ann.Child");
+            Class c = Class.forName("com.rxb.ann1.Child");
             Description cd = (Description) c.getAnnotation(Description.class);
             System.out.println(cd.desc());
 
@@ -20,7 +20,7 @@ public class ParseAnn {
                 //判断方法上是否存在description注解
                 boolean isMExist = m.isAnnotationPresent(Description.class);
                 if(isMExist){
-                    Description md = (Description) m.getAnnotation(Description.class);
+                    Description md = m.getAnnotation(Description.class);
                     System.out.println(md.desc());
                 }
             }

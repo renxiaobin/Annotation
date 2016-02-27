@@ -1,4 +1,4 @@
-package com.rxb.ann;
+package com.rxb.ann2;
 
 /**
  * Created by rxb14 on 2016/2/26.
