@@ -37,18 +37,22 @@ public class Service {
             pf.setCostPrice(rs1.getDouble("costPrice"));
             pf.setGoodsId(rs1.getInt("goodsId"));
             temp = 0.0;
+            //交易一笔的利润
             temp = pf.getSellingPrice() - pf.getCostPrice();
 
             sql="select SUM(t.trading_number) sumNum from tradinginfo t WHERE t.trading_goods_id= '"+pf.getGoodsId()+"'";
             rs2 = st2.executeQuery(sql);
             while(rs2.next()){
+                //交易数量
                 pf.setTradingNum(rs2.getInt("sumNum"));
             }
+            //总利润
             pf.setProfit(temp*pf.getTradingNum());
 
             sql = "SELECT SUM(t.trading_goods_id) times from tradinginfo t where t.trading_goods_id= '"+pf.getGoodsId()+"'";
             rs3 = st3.executeQuery(sql);
             while(rs3.next()){
+                //设置交易次数
                 pf.setTimes(rs3.getInt("times"));
             }
             list.add(pf);
