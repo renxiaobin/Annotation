@@ -14,6 +14,7 @@ import java.util.Date;
 /**
  * 通过HttpServletRequest对象获取访问用户的信息（如IP地址等）
  * Created by rxb14 on 2016/3/14.
+ * 通过WebListener注解声明监听器
  */
 @WebListener
 public class MyServletRequestListener implements ServletRequestListener {
